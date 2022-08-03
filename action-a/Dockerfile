@@ -6,4 +6,4 @@ COPY . /github/workspace
 
 WORKDIR  /github/workspace
 
-CMD ["ls"]
+ENTRYPOINT [ "./entrypoint.sh" ]
