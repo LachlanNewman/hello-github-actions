@@ -13,9 +13,8 @@ runs:
   using: "docker"
   image: "Dockerfile"
   args:
-    - "-v"
-    - '${docs}:/home/app'
-
+    v: "${docs}:/home/app"
+    
 branding:
   icon: "mic"
   color: "purple"
