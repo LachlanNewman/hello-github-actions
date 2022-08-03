@@ -1,4 +1,4 @@
 #!/bin/sh -l
 
-pwd
+git status
 sh -c "echo Hello world my name is $INPUT_MY_NAME"
