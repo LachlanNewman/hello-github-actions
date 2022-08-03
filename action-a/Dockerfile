@@ -2,9 +2,8 @@ FROM python:3.9-slim as build
 
 RUN apt-get update && apt-get install -y libcairo2-dev python3-dev libffi-dev git libmagic1
 
-COPY . /home/python/app/
+COPY . /github/workspace
 
-WORKDIR  /home/python/app
+WORKDIR  /github/workspace
 
-RUN ls
 ENTRYPOINT ["./entrypoint.sh"]
