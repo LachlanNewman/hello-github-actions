@@ -7,4 +7,4 @@ COPY . /home/python/app/
 WORKDIR  /home/python/app
 
 RUN ls
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["./entrypoint.sh"]
