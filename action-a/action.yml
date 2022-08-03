@@ -12,7 +12,8 @@ inputs:
 runs:
   using: "docker"
   image: "Dockerfile"
-  volumes:
+  args:
+    - "-v"
     - '${docs}:/home/app'
 
 branding:
