@@ -5,4 +5,6 @@ RUN apt-get update && apt-get install -y libcairo2-dev python3-dev libffi-dev gi
 COPY . /home/python/app/
 
 WORKDIR  /home/python/app
+
+RUN ls
 ENTRYPOINT ["/entrypoint.sh"]
