@@ -7,10 +7,13 @@ inputs:
     description: "Who to greet"
     required: true
     default: "World"
+    docs: 'test'
 
 runs:
   using: "docker"
   image: "Dockerfile"
+  volumes:
+    - '${docs}:/home/app'
 
 branding:
   icon: "mic"
