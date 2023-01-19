@@ -4,7 +4,15 @@ on:
   workflow_call:
 
 jobs:
-  triage:
+  job1:
     runs-on: ubuntu-latest
     steps:
-    - run: echo ${{ inputs }}
+    - name: Set Build Info and Enviroment
+      id:  build-info-and-enviroment
+      run: echo "ENV_A=${{ steps.step_id.outputs.url_output }}" >> $GITHUB_ENV
+
+  job2: 
+    runs-on: ubuntu-latest
+    needs: job1
+    steps:
+      - run: echo ${{ env.ENV_A}}
